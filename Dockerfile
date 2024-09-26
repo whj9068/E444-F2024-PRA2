@@ -1,21 +1,27 @@
-FROM python:3.6-alpine
+FROM python:3.12
+WORKDIR /usr/local/app
 
-ENV FLASK_APP flasky.py
-ENV FLASK_CONFIG production
+# Install the application dependencies
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
 
-RUN adduser -D flasky
-USER flasky
+# Copy all codes into the dir
+COPY templates ./templates
+COPY activity1-4.py ./
+COPY boot.sh ./
 
-WORKDIR /home/flasky
-
-COPY requirements requirements
-RUN python -m venv venv
-RUN venv/bin/pip install -r requirements/docker.txt
-
-COPY app app
-COPY migrations migrations
-COPY flasky.py config.py boot.sh ./
-
-# run-time configuration
+# Define port
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+
+# Setup an app user so the container doesn't run as the root user
+RUN useradd hello_user
+USER hello_user
+
+# add "--host", "0.0.0.0" to ensure it listens on all network interfaces
+# run with docker run -p 5000:5000 hello_flask    
+CMD ["flask", "--app", "activity1-4", "run", "--host", "0.0.0.0"]
+
+# # Approach of using venv
+# RUN python -m venv venv
+# RUN venv/bin/pip install -r requirements/docker.txt
+# ENTRYPOINT ["./deploy.sh"]

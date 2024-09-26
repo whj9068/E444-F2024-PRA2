@@ -15,6 +15,12 @@ Flasky
 ![Screenshot of chapter 4 example 2](./screenshoot/hello4-2.png)
 ![Screenshot of chapter 4 example 3](./screenshoot/hello4-3.png)
 
+## Activity 2
+![Screenshot of docker web](./screenshoot/dockerWeb.png)
+![Screenshot of docker ps](./screenshoot/dockerps.png)
+
+
+
 
 
 
