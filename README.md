@@ -1,5 +1,26 @@
 Flasky
 ======
+## Activity 1.1
+![Screenshot of terminal](./screenshoot/terminal.png)
+
+## Activity 1.2
+![Screenshot of example 2-1](./screenshoot/hello2-1.png)
+![Screenshot of example 2-2](./screenshoot/hello2-2.png)
+
+## Activity 1.3
+![Screenshot of chapter 3 example](./screenshoot/hello3.png)
+
+## Activity 1.4
+![Screenshot of chapter 4 example 1](./screenshoot/hello4-1.png)
+![Screenshot of chapter 4 example 2](./screenshoot/hello4-2.png)
+![Screenshot of chapter 4 example 3](./screenshoot/hello4-3.png)
+
+
+
+
+
+
+
 
 This repo is a clone of https://github.com/miguelgrinberg/flasky.
 
